@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class App extends Component {
+
+    linkStyle = {
+        padding: '10px',
+        color: '#304D1D' 
+    }
 
     render() {
         return (
@@ -10,10 +16,14 @@ export default class App extends Component {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-                        <a className="navbar-brand" href="#">Holy Quran</a>
-                        <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+                        {/* <a className="navbar-brand" href="#">Holy Quran</a> */}
+                        <h3 style={{color: 'gray'}}>Holy Quran</h3>
+                        <ul className="navbar-nav mr-auto mt-2 mt-lg-0" >
                             <li className="nav-item active">
-                                <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+                                <Link to='/' style={this.linkStyle}>Home</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to='/about' style={this.linkStyle}>About</Link>
                             </li>
                         </ul>
                         <form className="form-inline my-2 my-lg-0">
