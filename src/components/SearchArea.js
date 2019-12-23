@@ -9,8 +9,27 @@ export default class SearchArea extends Component {
         ayatNumber: 0
     }
 
+    constructor(props) {
+        super(props);
+
+        this.onChange = this.onChange.bind(this);
+    }
+
     onChange(e) {
-        console.log(e.target.name);
+        // console.log(e.target.name);
+        // console.log(e.target.value);
+        if (e.target.name === 'surahOrPara') {
+
+            let v = parseInt(e.target.value);
+            if (isNaN(v))
+                this.setState({ surahName: e.target.value });
+            else
+                this.setState({ para: e.target.value });
+
+        }
+        else {
+            this.setState({ [e.target.name]: e.target.value });
+        }
     }
 
     render() {
@@ -24,10 +43,10 @@ export default class SearchArea extends Component {
                         <p>Search any ayat here...</p>
                         <div className="form-row" >
                             <div className="col-7">
-                                <input type="text" className="form-control" placeholder="Surah Name / Para" name = "surahOrPara" onChange={this.onChange}/>
+                                <input type="text" className="form-control" placeholder="Surah Name / Para" name="surahOrPara" onChange={this.onChange} />
                             </div>
                             <div className="col">
-                                <input type="text" className="form-control" placeholder="Ayat Number" name = "ayatNumber" onChange={this.onChange}/>
+                                <input type="text" className="form-control" placeholder="Ayat Number" name="ayatNumber" onChange={this.onChange} />
                             </div>
                             <div className="col">
                                 <input type="button" className="btn btn-outline-success" value="Search" />
