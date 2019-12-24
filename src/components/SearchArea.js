@@ -16,8 +16,6 @@ export default class SearchArea extends Component {
     }
 
     onChange(e) {
-        // console.log(e.target.name);
-        // console.log(e.target.value);
         if (e.target.name === 'surahOrPara') {
 
             let v = parseInt(e.target.value);

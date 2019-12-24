@@ -1,6 +1,6 @@
 export const nameRegistryConfig = {
-    contractAddress = "0xB5C841DBCbc1954b2F6964C9d8500FeB2f96e3a3",
-    contractABI = [
+    contractAddress : "0xf7e7bb90F2c2E183595eD39a042ec25fb7c6778b",
+    contractABI : [
         {
             "constant": false,
             "inputs": [
@@ -58,6 +58,21 @@ export const nameRegistryConfig = {
                     "internalType": "uint256",
                     "name": "",
                     "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "getContracts",
+            "outputs": [
+                {
+                    "internalType": "string[]",
+                    "name": "",
+                    "type": "string[]"
                 }
             ],
             "payable": false,

@@ -1,5 +1,5 @@
 export const quranStorageConfig = {
-    contractABI = [
+    contractABI : [
         {
             "constant": false,
             "inputs": [
@@ -35,52 +35,6 @@ export const quranStorageConfig = {
                 }
             ],
             "name": "append",
-            "outputs": [
-                {
-                    "internalType": "bool",
-                    "name": "",
-                    "type": "bool"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "nonpayable",
-            "type": "function"
-        },
-        {
-            "constant": false,
-            "inputs": [
-                {
-                    "internalType": "string",
-                    "name": "_pass",
-                    "type": "string"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "_index",
-                    "type": "uint256"
-                },
-                {
-                    "internalType": "string",
-                    "name": "_ayat",
-                    "type": "string"
-                },
-                {
-                    "internalType": "string",
-                    "name": "_ayatNumber",
-                    "type": "string"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "_ruku",
-                    "type": "uint256"
-                },
-                {
-                    "internalType": "string",
-                    "name": "_details",
-                    "type": "string"
-                }
-            ],
-            "name": "update",
             "outputs": [
                 {
                     "internalType": "bool",
@@ -134,6 +88,52 @@ export const quranStorageConfig = {
             ],
             "name": "appended",
             "type": "event"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "_pass",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_index",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_ayat",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_ayatNumber",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_ruku",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_details",
+                    "type": "string"
+                }
+            ],
+            "name": "update",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
         },
         {
             "anonymous": false,
@@ -195,6 +195,11 @@ export const quranStorageConfig = {
                 {
                     "components": [
                         {
+                            "internalType": "uint256",
+                            "name": "index",
+                            "type": "uint256"
+                        },
+                        {
                             "internalType": "string",
                             "name": "ayat",
                             "type": "string"
@@ -253,6 +258,11 @@ export const quranStorageConfig = {
                 {
                     "components": [
                         {
+                            "internalType": "uint256",
+                            "name": "index",
+                            "type": "uint256"
+                        },
+                        {
                             "internalType": "string",
                             "name": "ayat",
                             "type": "string"
@@ -310,6 +320,11 @@ export const quranStorageConfig = {
             "outputs": [
                 {
                     "components": [
+                        {
+                            "internalType": "uint256",
+                            "name": "index",
+                            "type": "uint256"
+                        },
                         {
                             "internalType": "string",
                             "name": "ayat",
