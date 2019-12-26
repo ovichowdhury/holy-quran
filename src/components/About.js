@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from './layout/Navbar';
 
-export default class Home extends Component {
+export default class About extends Component {
     render() {
         return (
             <div>

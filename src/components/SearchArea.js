@@ -1,18 +1,44 @@
 import React, { Component } from 'react';
 import rightDivImage from '../static/kaba.png';
 // import leftDivImage from '../static/rsz_muhammad.png';
+import { QuranStorageService } from '../services/quranStorageEthService';
 
 export default class SearchArea extends Component {
     state = {
         surahName: '',
-        para: 0,
-        ayatNumber: 0
+        para: '',
+        ayatNumber: ''
     }
 
     constructor(props) {
         super(props);
 
         this.onChange = this.onChange.bind(this);
+        this.onSearch = this.onSearch.bind(this);
+        this.request = this.request.bind(this);
+    }
+
+    async request(type) {
+        let contractDetails = sessionStorage.getItem('contractDetails');
+        let ayatData;
+        if (contractDetails) {
+            let cd = JSON.parse(contractDetails);
+            let qss = new QuranStorageService(cd);
+            switch(type) {
+                case 'surah':
+                    ayatData = await qss.getBySurah(this.state.surahName, this.state.ayatNumber);
+                    break;
+                case 'para':
+                    ayatData = await qss.getByPara(this.state.para, this.state.ayatNumber);
+                    break;
+            }
+            
+            return ayatData
+        }
+        else {
+            alert("Contract Details not Found. Please Reload.");
+            return null;
+        }
     }
 
     onChange(e) {
@@ -30,6 +56,30 @@ export default class SearchArea extends Component {
         }
     }
 
+    async onSearch(e) {
+        try {
+            if (this.state.surahName !== "") {
+                //request for getBySurah
+                let ayatData = await this.request('surah');
+                console.log(ayatData);
+    
+            }
+            else if (this.state.para !== "") {
+                // request for getByPara
+                let ayatData = await this.request('para');
+                console.log(ayatData);
+            }
+        }
+        catch(ex) {
+            console.error(ex);
+            alert("Please check your inputs");
+        }
+        
+
+    }
+
+
+
     render() {
         return (
             <div className="row" style={{ height: '250px' }}>
@@ -41,13 +91,13 @@ export default class SearchArea extends Component {
                         <p>Search any ayat here...</p>
                         <div className="form-row" >
                             <div className="col-7">
-                                <input type="text" className="form-control" placeholder="Surah Name / Para" name="surahOrPara" onChange={this.onChange} />
+                                <input type="text" className="form-control" placeholder="Surah Name / Chapter" name="surahOrPara" onChange={this.onChange} />
                             </div>
                             <div className="col">
-                                <input type="text" className="form-control" placeholder="Ayat Number" name="ayatNumber" onChange={this.onChange} />
+                                <input type="text" className="form-control" placeholder="Verse Number" name="ayatNumber" onChange={this.onChange} />
                             </div>
                             <div className="col">
-                                <input type="button" className="btn btn-outline-success" value="Search" />
+                                <input type="button" className="btn btn-outline-success" value="Search" onClick={this.onSearch} />
                             </div>
                         </div>
                     </form>
