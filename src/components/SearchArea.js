@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import rightDivImage from '../static/kaba.png';
 // import leftDivImage from '../static/rsz_muhammad.png';
 import { QuranStorageService } from '../services/quranStorageEthService';
+import {withRouter } from 'react-router-dom';
 
-export default class SearchArea extends Component {
+class SearchArea extends Component {
     state = {
         surahName: '',
         para: '',
@@ -62,12 +63,14 @@ export default class SearchArea extends Component {
                 //request for getBySurah
                 let ayatData = await this.request('surah');
                 console.log(ayatData);
+                this.props.history.push('/search', {ayat: ayatData});
     
             }
             else if (this.state.para !== "") {
                 // request for getByPara
                 let ayatData = await this.request('para');
                 console.log(ayatData);
+                this.props.history.push('/search', {ayat: ayatData});
             }
         }
         catch(ex) {
@@ -97,7 +100,7 @@ export default class SearchArea extends Component {
                                 <input type="text" className="form-control" placeholder="Verse Number" name="ayatNumber" onChange={this.onChange} />
                             </div>
                             <div className="col">
-                                <input type="button" className="btn btn-outline-success" value="Search" onClick={this.onSearch} />
+                                <input type="button" className="btn btn-outline-info" value="Search" onClick={this.onSearch} />
                             </div>
                         </div>
                     </form>
@@ -109,3 +112,5 @@ export default class SearchArea extends Component {
         )
     }
 }
+
+export default withRouter(SearchArea);

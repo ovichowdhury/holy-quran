@@ -3,13 +3,19 @@ import React, { Component } from 'react';
 
 export default class AyatView extends Component {
 
-    
+
 
     render() {
         let items = [];
-        for(let i = 1; i<this.props.ayat.length; i++) {
+        for (let i = 1; i < this.props.ayat.length; i++) {
             console.log(this.props.ayat[i]);
-            items.push(<div> {this.props.ayat[i].ayat} </div>);
+            items.push(<div>
+                <p>
+                    <i className="fas fa-quran"></i> &nbsp;
+                    {this.props.ayat[i].ayat}
+                </p>
+
+            </div>);
         }
         console.log(items);
         // console.log(this.props.ayat);
@@ -19,8 +25,17 @@ export default class AyatView extends Component {
                 <div className="col-sm-2"></div>
                 <div className="col-sm-8" style={{ borderBottom: "2px dashed #c3c9c5" }}>
                     <div>
+                        <p>
+                            <i class="far fa-check-circle"></i> &nbsp;
+                            <i>Index: </i> {this.props.ayat[0].index}, &nbsp;
+                            <i>Surah: </i> <b>{this.props.ayat[0].surah} </b>, &nbsp;
+                            <i>Verse Number: </i> {this.props.ayat[0].ayatNumber}, &nbsp;
+                            <i>Chapter: </i> {this.props.ayat[0].para}
+                        </p>
+                    </div>
+                    <div>
 
-                        <p dir="rtl" style={{ textAlign: "right", color: "black" }}>
+                        <p dir="rtl" style={{ textAlign: "right", color: "black", fontSize: "200%" }}>
                             <i className="fas fa-quran"></i> &nbsp;
                             {this.props.ayat[0].ayat}
                         </p>
@@ -35,4 +50,8 @@ export default class AyatView extends Component {
             </div>
         )
     }
+
+
+
+
 }
