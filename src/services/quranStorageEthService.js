@@ -40,4 +40,13 @@ export class QuranStorageService {
         }
         return result;
     }
+
+    async getByIndex(index) {
+        let result = [];
+        for (let i = 0; i < this.contracts.length; i++) {
+            let data = await this.contracts[i].methods.get(index).call();
+            result.push(data);
+        }
+        return result;
+    }
 }

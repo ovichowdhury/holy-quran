@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import AyatContainer from './components/AyatContainer';
+import ProxyRedirect from './components/ProxyRedirect';
 import './App.css';
 import {getContracts, getContractDetails} from './services/nameRegistryEthService';
 
@@ -29,6 +30,7 @@ class App extends Component {
                         <Route exact path="/" component={Home} />
                         <Route exact path="/about" component={About} />
                         <Route exact path="/search" component={AyatContainer} />
+                        <Route exact path="/proxyredirect" component={ProxyRedirect} />
                     </Switch>
                 </div>
             </Router>

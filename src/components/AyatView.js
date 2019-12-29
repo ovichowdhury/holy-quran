@@ -35,7 +35,7 @@ export default class AyatView extends Component {
                     </div>
                     <div>
 
-                        <p dir="rtl" style={{ textAlign: "right", color: "black", fontSize: "200%" }}>
+                        <p dir="rtl" style={{ textAlign: "right", color: "black", fontSize: "250%", fontFamily: "'Scheherazade', serif" }}>
                             <i className="fas fa-quran"></i> &nbsp;
                             {this.props.ayat[0].ayat}
                         </p>

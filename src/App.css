@@ -19,3 +19,9 @@ p {
 .navbar-custom .nav-item:hover .nav-link {
     color: #ffffff;
 }
+
+input,
+input::-webkit-input-placeholder {
+  font-size: 13px;
+  line-height: 2;
+}

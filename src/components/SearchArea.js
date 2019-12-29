@@ -89,9 +89,9 @@ class SearchArea extends Component {
                 <div className="col-sm-2" >
                     {/* <img src={leftDivImage} alt="left image" style={{ maxWidth: '100%', height: 'auto' }}></img> */}
                 </div>
-                <div className="col-sm-7">
-                    <form style={{ marginTop: '20%' }}>
-                        <p>Search any ayat here...</p>
+                <div className="col-sm-7 py-5">
+                    <form style={{ marginTop: '10%' }}>
+                        <p> <i class="fas fa-search"></i> &nbsp;Search any ayat here...</p>
                         <div className="form-row" >
                             <div className="col-7">
                                 <input type="text" className="form-control" placeholder="Surah Name / Chapter" name="surahOrPara" onChange={this.onChange} />
@@ -105,8 +105,8 @@ class SearchArea extends Component {
                         </div>
                     </form>
                 </div>
-                <div className="col-sm-3" style={{ padding: '15px' }}>
-                    <img src={rightDivImage} alt="left image" style={{ maxWidth: '100%', height: 'auto' }}></img>
+                <div className="col-sm-3" style={{ padding: '15px',display: "flex", justifyContent: "center" }}>
+                    <img src={rightDivImage} alt="left image" style={{ width: "250px", height: "250px" }}></img>
                 </div>
             </div>
         )
