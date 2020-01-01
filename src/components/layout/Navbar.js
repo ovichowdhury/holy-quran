@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import {withRouter} from 'react-router-dom';
+import rightDivImage from '../../static/mos2.png';
 
 class Navbar extends Component {
 
     linkStyle = {
         padding: '10px',
-        color: 'white' 
+        color: 'white'
+ 
     }
 
     state = {
@@ -37,15 +39,17 @@ class Navbar extends Component {
 
     render() {
         return (
-            <div>
-                <nav className="navbar navbar-expand-lg navbar-custom navbar-dark">
+            <div className="">
+                <nav className="navbar navbar-expand-lg navbar-custom navbar-dark" style={{backgroundColor:"#899952"}}>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-                        {/* <a className="navbar-brand" href="#">Holy Quran</a> */}
-                        <h3 style={{color: 'white'}}> <i className="fas fa-quran"></i> Holy Quran</h3>
-                        <ul className="navbar-nav mr-auto mt-2 mt-lg-0" >
+                    <div className="collapse navbar-collapse d-flex justify-content-around " id="navbarTogglerDemo01">
+                    <div>
+                    <h3 style={{color: 'white'}}> <img src={rightDivImage} alt="left image" style={{ width: "50px", height: "50px" }}></img> Holy Quran</h3>
+                    </div>
+                    <div>
+                    <ul className="navbar-nav mr-auto mt-2 mt-lg-0 " >
                             <li className="nav-item active">
                                 <Link to='/' style={this.linkStyle}>Home</Link>
                             </li>
@@ -53,6 +57,10 @@ class Navbar extends Component {
                                 <Link to='/about' style={this.linkStyle}>About</Link>
                             </li>
                         </ul>
+                    </div>
+                        {/* <a className="navbar-brand" href="#">Holy Quran</a> */}
+                        
+                       
                         <form className="form-inline my-2 my-lg-0">
                             <input className="form-control mr-sm-2" type="search" placeholder="Verse index" aria-label="Search" onChange={this.onChange} name="searchText"/>
                             <button className="btn btn-outline-light my-2 my-sm-0" onClick={this.onSubmit}>Search</button>

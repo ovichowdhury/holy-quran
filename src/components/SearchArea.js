@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import rightDivImage from '../static/kaba.png';
+import rightDivImage from '../static/logo1.png';
 // import leftDivImage from '../static/rsz_muhammad.png';
 import { QuranStorageService } from '../services/quranStorageEthService';
 import {withRouter } from 'react-router-dom';
@@ -85,13 +85,19 @@ class SearchArea extends Component {
 
     render() {
         return (
-            <div className="row" style={{ height: '250px' }}>
-                <div className="col-sm-2" >
-                    {/* <img src={leftDivImage} alt="left image" style={{ maxWidth: '100%', height: 'auto' }}></img> */}
+            <div className="container">
+                <div className="row d-flex justify-content-center">
+                <div className="col-sm-8 mt-4" style={{display: "flex", justifyContent: "center" }}>
+                    <img src={rightDivImage} alt="left image" style={{ width: "150px", height: "150px" }}></img>
                 </div>
-                <div className="col-sm-7 py-5">
-                    <form style={{ marginTop: '10%' }}>
-                        <p> <i class="fas fa-search"></i> &nbsp;Search any ayat here...</p>
+                <div className=" col-sm-8 mt-4">
+                <div className="card shadow" style={{border:"none"}}>
+                    <div className="card-hedaer">
+
+                    </div>
+                    <div className="card-body">
+                    <form>
+                        <p className=""> <i class="fas fa-search"></i> &nbsp;Search any ayat here...</p>
                         <div className="form-row" >
                             <div className="col-7">
                                 <input type="text" className="form-control" placeholder="Surah Name / Chapter" name="surahOrPara" onChange={this.onChange} />
@@ -100,15 +106,18 @@ class SearchArea extends Component {
                                 <input type="text" className="form-control" placeholder="Verse Number" name="ayatNumber" onChange={this.onChange} />
                             </div>
                             <div className="col">
-                                <input type="button" className="btn btn-outline-info" value="Search" onClick={this.onSearch} />
+                                <input type="button" className="btn btn-outline-success"  value="Search" onClick={this.onSearch} />
                             </div>
                         </div>
                     </form>
+                    </div>
                 </div>
-                <div className="col-sm-3" style={{ padding: '15px',display: "flex", justifyContent: "center" }}>
-                    <img src={rightDivImage} alt="left image" style={{ width: "250px", height: "250px" }}></img>
+                    
                 </div>
+                
             </div>
+            </div>
+            
         )
     }
 }
