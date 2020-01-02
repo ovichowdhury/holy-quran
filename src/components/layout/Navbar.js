@@ -62,8 +62,8 @@ class Navbar extends Component {
                         
                        
                        <form className="form-inline my-2 my-lg-0">
-                            <input className="form-control mr-sm-2" type="search" placeholder="Verse index" aria-label="Search" onChange={this.onChange} name="searchText"/>
-                            <button className="btn btn-outline-light my-2 my-sm-0" onClick={this.onSubmit}>Search</button>
+                            <input className="form-control mr-sm-2" type="text" placeholder="Verse index" onChange={this.onChange} name="searchText"/>
+                            <button className="btn btn-outline-light my-2 my-sm-0" onClick={this.onSubmit}> <i className="fas fa-search"> </i></button>
                         </form>
                        
                         
