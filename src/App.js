@@ -6,6 +6,8 @@ import AyatContainer from './components/AyatContainer';
 import ProxyRedirect from './components/ProxyRedirect';
 import './App.css';
 import {getContracts, getContractDetails} from './services/nameRegistryEthService';
+import 'react-notifications/lib/notifications.css';
+import {NotificationContainer} from 'react-notifications';
 
 
 class App extends Component {
@@ -32,6 +34,7 @@ class App extends Component {
                         <Route exact path="/search" component={AyatContainer} />
                         <Route exact path="/proxyredirect" component={ProxyRedirect} />
                     </Switch>
+                    <NotificationContainer />
                 </div>
             </Router>
         )

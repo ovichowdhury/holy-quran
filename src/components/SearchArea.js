@@ -3,6 +3,7 @@ import rightDivImage from '../static/logo1.png';
 // import leftDivImage from '../static/rsz_muhammad.png';
 import { QuranStorageService } from '../services/quranStorageEthService';
 import {withRouter } from 'react-router-dom';
+import {NotificationManager} from 'react-notifications';
 
 class SearchArea extends Component {
     state = {
@@ -75,7 +76,9 @@ class SearchArea extends Component {
         }
         catch(ex) {
             console.error(ex);
-            alert("Please check your inputs");
+            //alert("Please check your inputs");
+            NotificationManager.error('Please check your inputs', 'Warning', 5000);
+            
         }
         
 
