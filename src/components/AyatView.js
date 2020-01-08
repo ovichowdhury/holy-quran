@@ -20,13 +20,13 @@ export default class AyatView extends Component {
         console.log(items);
         // console.log(this.props.ayat);
         return (
-            <div className="row" style={{ padding: "10px" }}>
+            <div className="row" style={{ padding: "10px" }} >
 
                 <div className="col-sm-2"></div>
                 <div className="col-sm-8" style={{ borderBottom: "2px dashed #c3c9c5" }}>
                     <div>
                         <p>
-                            <i class="far fa-check-circle"></i> &nbsp;
+                            <i className="far fa-check-circle"></i> &nbsp;
                             <i>Index: </i> {this.props.ayat[0].index}, &nbsp;
                             <i>Surah: </i> <b>{this.props.ayat[0].surah} </b>, &nbsp;
                             <i>Verse Number: </i> {this.props.ayat[0].ayatNumber}, &nbsp;

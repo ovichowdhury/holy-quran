@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import { Surah } from "../static/SurahName";
 import { withRouter } from "react-router-dom";
+import { Para } from './../static/ParaName';
 
 class ContentArea extends Component {
   state = {
-    flag: false,
-    checkedButton: true,
+    checkSurah: true,
+    checkPara: false,
     surah: "",
     para: "",
-    surahList: Surah
+    surahList: Surah,
+    paraList: Para
   };
 
   // componentDidMount() {
@@ -33,11 +35,11 @@ class ContentArea extends Component {
   };
 
   onSurah = () => {
-    this.setState({ flag: false, checkedButton: true });
+    this.setState({ checkSurah: true, checkPara: false });
   };
 
-  onpara = () => {
-    this.setState({ flag: true, checkedButton: false });
+  onPara = () => {
+    this.setState({ checkSurah: false, checkPara: true });
   };
 
   // toggle = (val) => {
@@ -71,7 +73,7 @@ class ContentArea extends Component {
                     style={{
                       fontFamily: "'Scheherazade', serif",
                       fontWeight: "bold",
-                      fontSize:"25px"
+                      fontSize: "25px"
                     }}
                   >
                     ( {s.surahNameArb} )
@@ -89,9 +91,43 @@ class ContentArea extends Component {
       </div>
     );
 
-    const showpara = (
-      <div>
-        <h1>para</h1>
+    const showPara = (
+      <div
+        className="row d-flex justify-content-center mt-3 "
+        style={{ cursor: "pointer" }}
+      >
+        {this.state.paraList.map(p => (
+          <div className="col-sm-4 mt-3" key={p.id}>
+            <div
+              className="card"
+              style={{ boxShadow: "1px 2px 3px rgba(0, 0, 0, .1)" }}
+            >
+              <div
+                className="card-body m-auto"
+              // onClick={() => this.handleClick(s.id)}
+              >
+                <p style={{ fontSize: "18px" }}>
+                  <span>{p.paraId}.</span> {p.paraEngName}{" "}
+                  <span
+                    className="text-success"
+                    style={{
+                      fontFamily: "'Scheherazade', serif",
+                      fontWeight: "bold",
+                      fontSize: "25px"
+                    }}
+                  >
+                    ( {p.paraArabName} )
+                  </span>{" "}
+                  {/* <span className="text-info" style={{ fontSize: "10px" }}>{s.englishTitle}</span> */}
+                </p>
+                <p style={{ fontSize: "15px" }}>
+                  Total Ayat:{" "}
+                  <span className="text-warning">{p.totalAyat}</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     );
 
@@ -103,8 +139,9 @@ class ContentArea extends Component {
               <input
                 type="radio"
                 name={this.state.surah}
-                onClick={this.onSurah}
-                checked={this.state.checkedButton}
+                // onClick={this.onSurah}
+                onChange={this.onSurah}
+                checked={this.state.checkSurah}
               />
               &nbsp; Surah
             </label>
@@ -114,15 +151,16 @@ class ContentArea extends Component {
               <input
                 type="radio"
                 name={this.state.para}
-                onClick={this.onpara}
-                checked={!this.state.checkedButton}
+                // onClick={this.onPara}
+                onChange={this.onPara}
+                checked={this.state.checkPara}
               />
               &nbsp; Para
             </label>
           </div>
         </div>
 
-        {this.state.flag ? showpara : showSurah}
+        {this.state.checkSurah == true ? showSurah : showPara}
       </div>
     );
   }

@@ -42,7 +42,7 @@ class AyatContainer extends Component {
             <div>
                 <Navbar />
                 <div style={{ padding: "25px" }}>
-                    {this.state.ayats.map((a) => <AyatView key={Math.random().toString()} ayat={a} />)}
+                    {this.state.ayats.map((a) => <AyatView key={a.index} ayat={a} />)}
                 </div>
 
             </div>
