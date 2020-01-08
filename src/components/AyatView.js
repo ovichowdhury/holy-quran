@@ -30,7 +30,7 @@ export default class AyatView extends Component {
                             <i>Index: </i> {this.props.ayat[0].index}, &nbsp;
                             <i>Surah: </i> <b>{this.props.ayat[0].surah} </b>, &nbsp;
                             <i>Verse Number: </i> {this.props.ayat[0].ayatNumber}, &nbsp;
-                            <i>Chapter: </i> {this.props.ayat[0].para}
+                            <i>Para: </i> {this.props.ayat[0].para}
                         </p>
                     </div>
                     <div>
