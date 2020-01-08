@@ -5,7 +5,7 @@ export const Surah = [
     "lIndex": "7",
     "totalAyat": "7",
     "surahNameEng": "Al-Faatiha",
-    "surahNameArb": "الفاتحة",
+    "surahNameArb": "سورة الفاتحة",
     "englishTitle": "The Opener",
     "details": "Makkan",
     "description": ""
@@ -39,7 +39,7 @@ export const Surah = [
     "lIndex": "669",
     "totalAyat": "176",
     "surahNameEng": "An-Nisa",
-    "surahNameArb": "ٱلنِّسَاء",
+    "surahNameArb": "سورة النساء",
     "englishTitle": "The Women",
     "details": "Madinah",
     "description": ""

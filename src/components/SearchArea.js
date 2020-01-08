@@ -12,7 +12,8 @@ class SearchArea extends Component {
     surahName: "",
     para: "",
     ayatNumber: "",
-    any: ""
+    any: "",
+    autoCompleteDom: ""
   };
 
   constructor(props) {
@@ -79,7 +80,9 @@ class SearchArea extends Component {
     if (searchText.length === 0) {
       matching = [];
       console.log(matching);
-      match.innerHTML = "";
+      this.setState({
+        autoCompleteDom: ""
+      });
     }
 
     this.outPut(matching);
@@ -88,23 +91,33 @@ class SearchArea extends Component {
   // Show Result in Html
   outPut = matchingData => {
     if (matchingData.length > 0) {
-      const match = document.getElementById("match-list");
-      const html = matchingData
-        .map(
-          data => `
-            <div class ="card card-body mb-1 shadow animated pulse faster">
-                <h4>
-                    ${data.surahNameEng} (${data.surahNameArb}) <span class="text-primary">
-                        ${data.englishTitle}
-                    </span>
-                </h4>
-                <small>Details: ${data.details} / Ayat: ${data.totalAyat} / Num: ${data.id}</small>
-            </div>
-        `
-        )
-        .join("");
+      //const match = document.getElementById("match-list");
+      const html = matchingData.slice(0, 5).map(data => {
+        return (
+          <div
+            className="card card-body mb-1 shadow animated pulse faster"
+            key={data.id}
+            style={{ cursor: "pointer" }}
+            onClick={()=> {
+              this.setState({
+                surahName: data.surahNameEng,
+                autoCompleteDom: ""
+              })
+              
+            }
+          }
+          >
+            <p style={{ fontSize: "13px" }}>
+              {data.surahNameEng} <span style={{fontFamily: "'Scheherazade', serif", fontWeight:"bold"}}>({data.surahNameArb})</span>{" "}
+              <span className="text-success">{data.englishTitle}</span>
+            </p>
+          </div>
+        );
+      });
 
-      match.innerHTML = html;
+      //console.log(html);
+
+      this.setState({ autoCompleteDom: html });
     }
   };
 
@@ -151,7 +164,8 @@ class SearchArea extends Component {
                 <form>
                   <p className="">
                     {" "}
-                    <i class="fas fa-search"></i> &nbsp;Search any ayat here...
+                    <i className="fas fa-search"></i> &nbsp;Search any ayat
+                    here...
                   </p>
 
                   <div className="form-row">
@@ -163,13 +177,16 @@ class SearchArea extends Component {
                         placeholder="Surah Name / Chapter"
                         name="surahOrPara"
                         onChange={this.onChange}
-                        autocomplete="off"
+                        autoComplete="off"
+                        value={this.state.surahName}
                       />
                       <div
                         id="match-list"
-                        class=""
+                        className="col-sm-12"
                         style={{ position: "absolute", zIndex: "1" }}
-                      ></div>
+                      >
+                        {this.state.autoCompleteDom}
+                      </div>
                     </div>
                     <div className="col-sm-3">
                       <input
@@ -194,8 +211,6 @@ class SearchArea extends Component {
             </div>
           </div>
         </div>
-
-        
       </div>
     );
   }
