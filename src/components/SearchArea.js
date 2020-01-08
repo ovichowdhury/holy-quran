@@ -34,7 +34,7 @@ class SearchArea extends Component {
             switch (type) {
                 case "surah":
                     ayatData = await qss.getBySurah(
-                        this.state.surahName,
+                        this.state.surahName.toLowerCase(),
                         this.state.ayatNumber
                     );
                     break;
@@ -180,6 +180,7 @@ class SearchArea extends Component {
                                                 name="surahOrPara"
                                                 onChange={this.onChange}
                                                 autoComplete="off"
+                                                onFocus={(e)=>e.target.select()}
                                             // value={this.state.surahName || this.state.para}
                                             />
                                             <div

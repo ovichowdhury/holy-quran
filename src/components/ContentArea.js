@@ -103,7 +103,7 @@ class ContentArea extends Component {
               style={{ boxShadow: "1px 2px 3px rgba(0, 0, 0, .1)" }}
             >
               <div
-                className="card-body m-auto"
+                className="card-body text-center"
               // onClick={() => this.handleClick(s.id)}
               >
                 <p style={{ fontSize: "18px" }}>
