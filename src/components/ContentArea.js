@@ -66,7 +66,7 @@ class ContentArea extends Component {
                 className="card-body m-auto"
                 onClick={() => this.handleClick(s.id)}
               >
-                <p style={{ fontSize: "20px" }}>
+                <p style={{fontSize:"15px",fontFamily:"'Capriola', sans-serif"}}>
                   <span>{s.id}.</span> {s.surahNameEng}{" "}
                   <span
                     className="text-success"
@@ -106,7 +106,7 @@ class ContentArea extends Component {
                 className="card-body text-center"
               // onClick={() => this.handleClick(s.id)}
               >
-                <p style={{ fontSize: "18px" }}>
+                <p style={{fontSize:"15px",fontFamily:"'Capriola', sans-serif"}}>
                   <span>{p.paraId}.</span> {p.paraEngName}{" "}
                   <span
                     className="text-success"
@@ -135,7 +135,7 @@ class ContentArea extends Component {
       <div className="container">
         <div className="row d-flex justify-content-center mt-4">
           <div className="radio mr-3">
-            <label className="text-success" style={{ cursor: "pointer" }}>
+            <label className="text-success" style={{ cursor: "pointer",fontSize:"25px", fontFamily:"'Satisfy', cursive" }}>
               <input
                 type="radio"
                 name={this.state.surah}
@@ -147,7 +147,7 @@ class ContentArea extends Component {
             </label>
           </div>
           <div className="radio">
-            <label className="text-warning" style={{ cursor: "pointer" }}>
+            <label className="text-warning" style={{ cursor: "pointer",fontSize:"25px", fontFamily:"'Satisfy', cursive"  }}>
               <input
                 type="radio"
                 name={this.state.para}
