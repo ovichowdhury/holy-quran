@@ -18,17 +18,25 @@ class ContentArea extends Component {
   // }
 
   handleClick = id => {
-    console.log("Handle click is working");
+    //console.log("Handle click is working");
     const surahId = id.toString();
-    console.log("SurahId", surahId);
+    //console.log("SurahId", surahId);
     let surahDetect = surahId - 1;
-    console.log("SurahSearchforIndex", surahDetect);
+    //console.log("SurahSearchforIndex", surahDetect);
     const surahArr = Surah;
-    console.log("FirstIndex", surahArr[surahDetect].fIndex);
-    console.log("LastIndex", surahArr[surahDetect].lIndex);
+    //console.log("FirstIndex", surahArr[surahDetect].fIndex);
+    //console.log("LastIndex", surahArr[surahDetect].lIndex);
 
     this.props.history.push("/search", { index: surahArr[surahDetect].fIndex });
   };
+
+  handleParaClick = id => {
+    //console.log("click is working", id);
+    const firstIndex = Para[id - 1].parafIndex;
+    this.props.history.push("/search", { index: firstIndex });
+
+  }
+
 
   onChange = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -99,14 +107,14 @@ class ContentArea extends Component {
         style={{ cursor: "pointer" }}
       >
         {this.state.paraList.map(p => (
-          <div className="col-sm-4 mt-3" key={p.id}>
+          <div className="col-sm-4 mt-3" key={p.paraId}>
             <div
               className="card hvr-pop"
               style={{ boxShadow: "1px 2px 3px rgba(0, 0, 0, .1)" }}
             >
               <div
                 className="card-body text-center"
-              // onClick={() => this.handleClick(s.id)}
+                onClick={() => this.handleParaClick(p.paraId)}
               >
                 <p style={{fontSize:"15px",fontFamily:"'Capriola', sans-serif"}}>
                   <span>{p.paraId}.</span> {p.paraEngName}{" "}
