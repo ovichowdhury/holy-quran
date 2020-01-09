@@ -195,7 +195,7 @@ class SearchArea extends Component {
                                             <input
                                                 type="text"
                                                 className="form-control"
-                                                placeholder="Verse Number"
+                                                placeholder="Ayat Number"
                                                 name="ayatNumber"
                                                 onChange={this.onChange}
                                             />
