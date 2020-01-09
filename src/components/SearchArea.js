@@ -162,11 +162,11 @@ class SearchArea extends Component {
                             className="card "
                             style={{ boxShadow: "1px 2px 3px rgba(0, 0, 0, .1)" }}
                         >
-                            <div className="card-body">
+                            <div className="card-body hvr-icon-grow-rotate">
                                 <form>
                                     <p className="">
                                         {" "}
-                                        <i className="fas fa-search"></i> &nbsp;Search any ayat
+                                        <i className="fas fa-search hvr-icon text-success"></i> &nbsp;Search any ayat
                                         here...
                   </p>
 
