@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "ethereumjs-tx": "^2.1.1",
+    "hover.css": "^2.3.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-notifications": "^1.4.3",

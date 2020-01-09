@@ -54,12 +54,14 @@ class ContentArea extends Component {
     const showSurah = (
       <div
         className="row d-flex justify-content-center mt-3 "
-        style={{ cursor: "pointer" }}
+        
+        style={{ cursor: "pointer", }}
       >
         {this.state.surahList.map(s => (
           <div className="col-sm-4 mt-3" key={s.id}>
             <div
-              className="card"
+              className="card hvr-pop"
+              id="surahCard"
               style={{ boxShadow: "1px 2px 3px rgba(0, 0, 0, .1)" }}
             >
               <div
@@ -99,7 +101,7 @@ class ContentArea extends Component {
         {this.state.paraList.map(p => (
           <div className="col-sm-4 mt-3" key={p.id}>
             <div
-              className="card"
+              className="card hvr-pop"
               style={{ boxShadow: "1px 2px 3px rgba(0, 0, 0, .1)" }}
             >
               <div
@@ -135,7 +137,7 @@ class ContentArea extends Component {
       <div className="container">
         <div className="row d-flex justify-content-center mt-4">
           <div className="radio mr-3">
-            <label className="text-success" style={{ cursor: "pointer",fontSize:"25px", fontFamily:"'Satisfy', cursive" }}>
+            <label className="text-success hvr-grow-rotate" style={{ cursor: "pointer",fontSize:"25px", fontFamily:"'Satisfy', cursive" }}>
               <input
                 type="radio"
                 name={this.state.surah}
@@ -147,7 +149,7 @@ class ContentArea extends Component {
             </label>
           </div>
           <div className="radio">
-            <label className="text-warning" style={{ cursor: "pointer",fontSize:"25px", fontFamily:"'Satisfy', cursive"  }}>
+            <label className="text-warning hvr-grow-rotate" style={{ cursor: "pointer",fontSize:"25px", fontFamily:"'Satisfy', cursive"  }}>
               <input
                 type="radio"
                 name={this.state.para}
@@ -160,7 +162,7 @@ class ContentArea extends Component {
           </div>
         </div>
 
-        {this.state.checkSurah == true ? showSurah : showPara}
+        {this.state.checkSurah === true ? showSurah : showPara}
       </div>
     );
   }
