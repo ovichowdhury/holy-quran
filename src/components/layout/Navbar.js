@@ -46,7 +46,7 @@ class Navbar extends Component {
                     </button>
                     <div className="collapse navbar-collapse " id="navbarTogglerDemo01">
                     
-                    <h3 style={{color: 'white', marginRight:"5rem", fontFamily:"'Julius Sans One', sans-serif"}}> <img src={rightDivImage} alt="left image" style={{ width: "45px", height: "45px" }}></img> &nbsp;Holy<span className="display-4" style={{color:"#ff7f00"}}>Q</span>uran</h3>
+                    <h3 style={{color: 'white', marginRight:"5rem", fontFamily:"'Julius Sans One', sans-serif"}}> &nbsp;Holy<span className="" style={{color:"#ff7f00", fontSize:"45px"}}>Q</span>uran</h3>
                     
                     
                     <ul className="navbar-nav mr-auto mt-2 mt-lg-0 " style={{fontFamily:"'Julius Sans One', sans-serif"}} >
@@ -62,7 +62,7 @@ class Navbar extends Component {
                         
                        
                        <form className="form-inline my-2 my-lg-0">
-                            <input className="form-control mr-sm-2" type="text" placeholder="Verse index" onChange={this.onChange} name="searchText"/>
+                            <input className="form-control mr-sm-2" type="text" placeholder="Verse index" onChange={this.onChange} name="searchText" style={{borderRadius: "30px"}}/>
                             <button className="btn btn-outline-light my-2 my-sm-0" onClick={this.onSubmit}> <i className="fas fa-search"> </i></button>
                         </form>
                        
