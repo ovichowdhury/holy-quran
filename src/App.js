@@ -5,9 +5,11 @@ import About from './components/About';
 import AyatContainer from './components/AyatContainer';
 import ProxyRedirect from './components/ProxyRedirect';
 import './App.css';
-import {getContracts, getContractDetails} from './services/nameRegistryEthService';
+import { getContracts, getContractDetails } from './services/nameRegistryEthService';
 import 'react-notifications/lib/notifications.css';
-import {NotificationContainer} from 'react-notifications';
+import { NotificationContainer } from 'react-notifications';
+import Footer from './components/layout/Footer';
+import Navbar from './components/layout/Navbar';
 
 
 class App extends Component {
@@ -16,7 +18,7 @@ class App extends Component {
     getAllContracts = async () => {
         let details = [];
         let d = await getContracts();
-        for(let i=0; i<d.length; i++) {
+        for (let i = 0; i < d.length; i++) {
             let conDetails = await getContractDetails(d[i]);
             details.push(conDetails);
         }
@@ -28,6 +30,7 @@ class App extends Component {
         return (
             <Router>
                 <div>
+                    <Navbar />
                     <Switch>
                         <Route exact path="/" component={Home} />
                         <Route exact path="/about" component={About} />
@@ -35,6 +38,7 @@ class App extends Component {
                         <Route exact path="/proxyredirect" component={ProxyRedirect} />
                     </Switch>
                     <NotificationContainer />
+                    <Footer />
                 </div>
             </Router>
         )

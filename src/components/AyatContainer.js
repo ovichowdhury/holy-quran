@@ -22,7 +22,7 @@ class AyatContainer extends Component {
             let qss = new QuranStorageService(cd);
             let ayatData = await qss.getByIndex(index);
             console.log("Index based: ", ayatData);
-            this.setState({ ayats: [ayatData], page: index });
+            this.setState({ ayats: [ayatData], page: parseInt(index) });
         }
     }
 
@@ -52,7 +52,7 @@ class AyatContainer extends Component {
         const passedState = this.props.location.state;
         if (this.props.location.state) {
             if (this.props.location.state.ayat) {
-                this.setState({ ayats: [passedState.ayat], page: passedState.ayat.index});
+                this.setState({ ayats: [passedState.ayat], page: parseInt(passedState.ayat.index)});
             }
             else if (this.props.location.state.index) {
                 this.request(this.props.location.state.index);
@@ -67,7 +67,6 @@ class AyatContainer extends Component {
 
         return (
             <div>
-                <Navbar />
                 <div style={{ padding: "25px" }}>
                     {this.state.ayats.map((a) => <AyatView key={a.index} ayat={a} />)}
                 </div>
