@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import {withRouter} from 'react-router-dom';
-import rightDivImage from '../../static/mos2.png';
+
 
 class Navbar extends Component {
 
@@ -50,10 +50,10 @@ class Navbar extends Component {
                     
                     
                     <ul className="navbar-nav mr-auto mt-2 mt-lg-0 " style={{fontFamily:"'Julius Sans One', sans-serif"}} >
-                            <li className="nav-item active">
+                            <li className="nav-item active hvr-forward">
                                 <Link to='/' style={this.linkStyle}>Home</Link>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item hvr-forward">
                                 <Link to='/about' style={this.linkStyle}>About</Link>
                             </li>
                         </ul>
