@@ -62,7 +62,7 @@ class Navbar extends Component {
                         
                        
                        <form className="form-inline my-2 my-lg-0">
-                            <input className="form-control mr-sm-2" type="text" placeholder="Ayat index" onChange={this.onChange} name="searchText" style={{borderRadius: "30px"}}/>
+                            <input className="form-control mr-sm-2" type="text" placeholder="Ayat index" onChange={this.onChange} name="searchText" style={{borderRadius: "30px"}} autoComplete="off"/>
                             <button className="btn btn-outline-light my-2 my-sm-0" onClick={this.onSubmit}> <i className="fas fa-search"> </i></button>
                         </form>
                        

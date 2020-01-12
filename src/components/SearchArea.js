@@ -145,7 +145,7 @@ class SearchArea extends Component {
 
     render() {
         return (
-            <div className="container " id="searchBack">
+            <div className="container " id="searchBack" >
                 <div className="row d-flex justify-content-center ">
                     <div
                         className="col-sm-8 mt-4"
@@ -160,9 +160,9 @@ class SearchArea extends Component {
                             style={{borderRadius:100}}
                         ></img>
                     </div>
-                    <div className=" col-sm-8 mt-4">
+                    <div className=" col-sm-8 mt-4" style={{zIndex:"1"}}>
                         <div
-                            className="card hvr-shadow-radial"
+                            className="card"
                             style={{ boxShadow: "1px 0px 3px rgba(0, 0, 0, .1)" }}
                         >
                             <div className="card-body hvr-icon-grow-rotate">
@@ -189,7 +189,7 @@ class SearchArea extends Component {
                                             <div
                                                 id="match-list"
                                                 className="col-sm-12"
-                                                style={{ position: "absolute", zIndex: "1" }}
+                                                style={{ position: "absolute" }}
                                             >
                                                 {this.state.autoCompleteDom}
                                             </div>
@@ -201,6 +201,7 @@ class SearchArea extends Component {
                                                 placeholder="Ayat Number"
                                                 name="ayatNumber"
                                                 onChange={this.onChange}
+                                                autoComplete="off"
                                             />
                                         </div>
                                         <div className="col-sm-2">
