@@ -50,12 +50,13 @@ class AyatContainer extends Component {
     componentDidMount() {
         this.index = this.props.location.state.index;
         const passedState = this.props.location.state;
-        if (this.props.location.state) {
-            if (this.props.location.state.ayat) {
-                this.setState({ ayats: [passedState.ayat], page: parseInt(passedState.ayat.index)});
+        if (passedState) {
+            if (passedState.ayat) {
+                //console.log("this is ayat: ", this.props.location.state.ayat);
+                this.setState({ ayats: [passedState.ayat], page: parseInt(passedState.ayat[0].index)});
             }
-            else if (this.props.location.state.index) {
-                this.request(this.props.location.state.index);
+            else if (passedState.index) {
+                this.request(passedState.index);
             }
             else {
                 console.error("Payload not set properly");
