@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import border from '../static/border.png'
 
 export default class AyatView extends Component {
   render() {
@@ -17,43 +18,48 @@ export default class AyatView extends Component {
     console.log(items);
     // console.log(this.props.ayat);
     return (
-      <div className="">
+      <div className="container">
         <div className="row d-flex justify-content-center">
-          <div className=" col-sm-6 mb-3 d-flex justify-content-center" style={{position:"relative"}}>
-            <div className="" style={{position:"absolute", top:50, left:65, zIndex:1}}>
-              <dt
-                class="d-flex align-items-center justify-content-center"
-                style={{
-                  color: "#fff",
-                  height: "90px",
-                  width: "90px",
-                  borderRadius: 80,
-                  backgroundColor: "#bc4571",
-                  boxShadow: "1px 0px 3px #000"
-
-                }}
-              >
-                Index : {this.props.ayat[0].index}
-              </dt>
-            </div>
-            <div class=" d-flex align-items-center" style={{position:"absolute", top:0, left:140, zIndex:0}}>
-              <dt
-                class="d-flex align-items-center justify-content-center"
+          
+          <div className=" col-sm-3 d-flex justify-content-center">
+          <div
+                className="d-flex align-items-center justify-content-center hvr-pop"
                 style={{
                   color: "#fff",
                   height: "110px",
                   width: "110px",
                   borderRadius: 80,
-                  backgroundColor: "#899952",
-                  boxShadow: "1px 0px 3px #000"
+                  backgroundColor: "#0c8579",
+                  boxShadow: "1px 0px 3px #000",
+                  border:"3px solid #fff"
+                  
+                }}
+              >
+                Para : {this.props.ayat[0].para}
+              </div>
+              <div
+                className="d-flex align-items-center justify-content-center hvr-pop"
+                style={{
+                  color: "#fff",
+                  height: "110px",
+                  width: "110px",
+                  borderRadius: 80,
+                  backgroundColor: "#bc7840",
+                  boxShadow: "1px 0px 3px #000",
+                  border:"3px solid #fff"
                 }}
               >
                 Verse : {this.props.ayat[0].ayatNumber}
-              </dt>
-            </div>
-            <div class="">
-              <dt
-                class="d-flex align-items-center justify-content-center"
+              </div>
+          </div>
+              
+            
+            
+          
+            
+            
+            <div
+                className=" d-flex align-items-center justify-content-center hvr-pop"
                 style={{
                   color: "#fff",
                   height: "150px",
@@ -61,39 +67,74 @@ export default class AyatView extends Component {
                   borderRadius: 80,
                   backgroundColor: "#717171",
                   boxShadow: "1px 0px 3px #000",
-                  textAlign:"center"
+                  textAlign:"center",
+                  border:"3px solid #fff"
                   
                 }}
               >
                 Surah : <br/>{this.props.ayat[0].surah.toUpperCase()}
-              </dt>
-            </div>
-            <div class=" d-flex align-items-center" style={{position:"absolute", zIndex:-1, left:370, top:30}} >
-              <dt
-                class="d-flex align-items-center justify-content-center"
+              </div>
+            
+              
+
+              <div className=" col-sm-3 d-flex justify-content-center">
+              <div
+                className="d-flex align-items-center justify-content-center hvr-pop"
                 style={{
                   color: "#fff",
-                  height: "120px",
-                  width: "120px",
+                  height: "110px",
+                  width: "110px",
                   borderRadius: 80,
-                  backgroundColor: "#0c8579",
-                  boxShadow: "1px 0px 3px #000"
+                  backgroundColor: "#bc4571",
+                  boxShadow: "1px 0px 3px #000",
+                  border:"3px solid #fff"
+
                 }}
               >
-                Para : {this.props.ayat[0].para}
-              </dt>
-            </div>
+                Index : {this.props.ayat[0].index}
+              </div>
+            
+            
+              <div
+                className="d-flex align-items-center justify-content-center hvr-pop"
+                style={{
+                  color: "#fff",
+                  height: "110px",
+                  width: "110px",
+                  borderRadius: 80,
+                  backgroundColor: "#899952",
+                  boxShadow: "1px 0px 3px #000",
+                  border:"3px solid #fff"
+
+                }}
+              >
+                Ruku : {this.props.ayat[0].ruku}
+              </div>
+              </div>
+            
+            
+              
+            
+            
+            
+            
 
             
-          </div>
+          
 
 
           
 
           
         </div>
+
+
+
+
+
+
         <div className="row d-flex justify-content-center">
-        <div className="col-sm-8 mt-5 d-flex justify-content-center">
+        <div className="col-sm-8 mt-5 d-flex align-items-center justify-content-center">
             <p
               dir="rtl"
               style={{
@@ -101,6 +142,9 @@ export default class AyatView extends Component {
                 color: "#333",
                 fontSize: "245%",
                 fontFamily: "'Scheherazade', serif"
+               
+
+                
               }}
             >
               <i className="fas fa-book-open" style={{ color: "#899952" }}></i>{" "}
