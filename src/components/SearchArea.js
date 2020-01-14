@@ -97,7 +97,7 @@ class SearchArea extends Component {
             const html = matchingData.slice(0, 5).map(data => {
                 return (
                     <div
-                        className="card card-body mb-1 shadow animated pulse faster"
+                        className="card card-body mb-1 shadow animated pulse faster hvr-underline-from-center"
                         key={data.id}
                         style={{ cursor: "pointer" }}
                         onClick={() => {
@@ -169,7 +169,7 @@ class SearchArea extends Component {
                                 <form>
                                     <p className="">
                                         {" "}
-                                        <i className="fas fa-search hvr-icon text-success"></i> &nbsp;Search any ayat
+                                        <i className="fas fa-search hvr-icon text-success" ></i> &nbsp;Search any ayat
                                         here...
                   </p>
 
