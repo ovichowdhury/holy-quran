@@ -2,13 +2,15 @@ import React, { Component } from "react";
 import border from '../static/border.png'
 
 export default class AyatView extends Component {
+
+  
   render() {
     let items = [];
     for (let i = 1; i < this.props.ayat.length; i++) {
       console.log(this.props.ayat[i]);
       items.push(
-        <div className="col-sm-8 mt-2 d-flex justify-content-center">
-          <p>
+        <div className="col-sm-8 d-flex justify-content-center">
+          <p className="mt-3" style={{fontSize:"20px",fontFamily:"'Capriola', sans-serif", color:"#333"}}>
             <i className="fas fa-book-open"></i> &nbsp;
             {this.props.ayat[i].ayat}
           </p>
@@ -17,13 +19,14 @@ export default class AyatView extends Component {
     }
     console.log(items);
     // console.log(this.props.ayat);
+  
     return (
       <div className="container">
-        <div className="row d-flex justify-content-center">
+        <div className="row d-flex justify-content-center" style={{fontFamily:"'Capriola', sans-serif", fontSize:"15px"}}>
           
           <div className=" col-sm-3 d-flex justify-content-center">
           <div
-                className="d-flex align-items-center justify-content-center hvr-pop"
+                className="d-flex align-items-center justify-content-center hvr-pop hvr-glow"
                 style={{
                   color: "#fff",
                   height: "110px",
@@ -38,7 +41,7 @@ export default class AyatView extends Component {
                 Para : {this.props.ayat[0].para}
               </div>
               <div
-                className="d-flex align-items-center justify-content-center hvr-pop"
+                className="d-flex align-items-center justify-content-center hvr-pop hvr-glow"
                 style={{
                   color: "#fff",
                   height: "110px",
@@ -59,7 +62,7 @@ export default class AyatView extends Component {
             
             
             <div
-                className=" d-flex align-items-center justify-content-center hvr-pop"
+                className=" d-flex align-items-center justify-content-center hvr-pop hvr-glow"
                 style={{
                   color: "#fff",
                   height: "150px",
@@ -68,7 +71,7 @@ export default class AyatView extends Component {
                   backgroundColor: "#717171",
                   boxShadow: "1px 0px 3px #000",
                   textAlign:"center",
-                  border:"3px solid #fff"
+                  border:"5px solid #fff"
                   
                 }}
               >
@@ -79,7 +82,7 @@ export default class AyatView extends Component {
 
               <div className=" col-sm-3 d-flex justify-content-center">
               <div
-                className="d-flex align-items-center justify-content-center hvr-pop"
+                className="d-flex align-items-center justify-content-center hvr-pop hvr-glow"
                 style={{
                   color: "#fff",
                   height: "110px",
@@ -96,7 +99,7 @@ export default class AyatView extends Component {
             
             
               <div
-                className="d-flex align-items-center justify-content-center hvr-pop"
+                className="d-flex align-items-center justify-content-center hvr-pop hvr-glow"
                 style={{
                   color: "#fff",
                   height: "110px",
@@ -134,13 +137,16 @@ export default class AyatView extends Component {
 
 
         <div className="row d-flex justify-content-center">
-        <div className="col-sm-8 mt-5 d-flex align-items-center justify-content-center">
+        <div className="col-sm-8 mt-5 d-flex align-items-center justify-content-center"
+         style={{borderTopStyle:"dashed", borderBottomStyle:"dashed", borderColor:"#717171"}}
+        >
             <p
+              className="mt-3"
               dir="rtl"
               style={{
                 textAlign: "right",
                 color: "#333",
-                fontSize: "245%",
+                fontSize: "40px",
                 fontFamily: "'Scheherazade', serif"
                
 
