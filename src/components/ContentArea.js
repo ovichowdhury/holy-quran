@@ -68,7 +68,7 @@ class ContentArea extends Component {
         {this.state.surahList.map(s => (
           <div className="col-sm-4 mt-3" key={s.id}>
             <div
-              className="card hvr-rotate hvr-shadow-radial"
+              className="card  hvr-shadow-radial"
               id="surahCard"
               style={{ boxShadow: "1px 0px 3px rgba(0, 0, 0, .1)" }}
             >
@@ -109,7 +109,7 @@ class ContentArea extends Component {
         {this.state.paraList.map(p => (
           <div className="col-sm-4 mt-3" key={p.paraId}>
             <div
-              className="card hvr-rotate hvr-shadow-radial"
+              className="card hvr-shadow-radial"
               style={{ boxShadow: "1px 0px 3px rgba(0, 0, 0, .1)" }}
             >
               <div

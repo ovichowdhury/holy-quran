@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import {withRouter} from 'react-router-dom';
 
+import { NotificationManager } from "react-notifications";
+
 
 class Navbar extends Component {
 
@@ -23,7 +25,7 @@ class Navbar extends Component {
         e.preventDefault();
         let val = parseInt(this.state.searchText);
         if(isNaN(val)){
-            alert("Please enter number between 1 to 6666");
+            NotificationManager.error("Please enter number between 1 to 6236", "Warning", 5000);
         }
         else {
             console.log("from nav: ", this.props.history.location);
