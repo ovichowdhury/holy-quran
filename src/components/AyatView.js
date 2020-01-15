@@ -130,15 +130,20 @@ export default class AyatView extends Component {
 
           
         </div>
-
-
+        <div className="row d-flex justify-content-center">
+        <div className="col-sm-9 d-flex justify-content-center" style={{backgroundImage:`url(${border})`, backgroundRepeat:"no-repeat", width:"100%", height:"170px", marginTop:"-80px", boxShadow:"0px 10px 0px", zIndex:0}}>
+                
+        </div>
+        
+        </div>       
+        
 
 
 
 
         <div className="row d-flex justify-content-center">
         <div className="col-sm-8 mt-5 d-flex align-items-center justify-content-center"
-         style={{borderTopStyle:"dashed", borderBottomStyle:"dashed", borderColor:"#717171"}}
+         style={{ borderBottomStyle:"dashed", borderColor:"#717171"}}
         >
             <p
               className="mt-3"
