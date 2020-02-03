@@ -11,7 +11,7 @@ class AyatContainer extends Component {
         ayats: [],
         page: 1,
         disableIncrement: false,
-        disableDecrement: true,
+        disableDecrement: false,
         maxPage: 6236
     }
 
