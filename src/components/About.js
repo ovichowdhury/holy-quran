@@ -31,7 +31,7 @@ export default class About extends Component {
 
           <div className="row d-flex justify-content-around align-items-center" >
             <div className="col-sm-4  text-center">
-              <a href="https://www.google.com">
+              <a href="https://www.github.com/mehedihasan25">
                 <img
                   className="hvr-bob hvr-glow"
                   src={Mehedi}
@@ -48,11 +48,12 @@ export default class About extends Component {
               <p className="mt-3" style={{ lineHeight: "7px", fontSize: "17px", fontFamily: "'Lobstar', cursive", color: "#5f7705" }}><i class="fas fa-id-card"></i> Md. Mehedi Hasan</p>
               <p className="" style={{ lineHeight: "7px", fontSize: "17px", fontFamily: "'Acme', sans-serif", color: "#595e5d" }}><i class="fas fa-laptop-code"></i> Blockchain Developer</p>
               <p className="" style={{ lineHeight: "7px", fontSize: "17px", fontFamily: "'Acme', sans-serif", color: "#595e5d" }}><i class="fas fa-university"></i> ERA Infotech Ltd.</p>
+              <p className="" style={{ lineHeight: "7px", fontSize: "16px", fontFamily: "'Acme', sans-serif", color: "#595e5d" }}><i class="far fa-envelope"></i> ishanmehadi@gmail.com</p>
 
 
             </div>
             <div className="col-sm-4  text-center">
-              <a href="https://www.google.com">
+              <a href="https://www.github.com/monirshimul">
                 <img
                   className="hvr-bob hvr-glow"
                   src={Monir}
@@ -66,9 +67,10 @@ export default class About extends Component {
               <p className="mt-3" style={{ lineHeight: "7px", fontSize: "17px", fontFamily: "'Lobstar', cursive", color: "#5f7705" }}><i class="fas fa-id-card"></i> Md. Monirul Islam</p>
               <p className="" style={{ lineHeight: "7px", fontSize: "17px", fontFamily: "'Acme', sans-serif", color: "#595e5d" }}><i class="fas fa-laptop-code"></i> Blockchain Developer</p>
               <p className="" style={{ lineHeight: "7px", fontSize: "17px", fontFamily: "'Acme', sans-serif", color: "#595e5d" }}><i class="fas fa-university"></i> ERA Infotech Ltd.</p>
+              <p className="" style={{ lineHeight: "7px", fontSize: "16px", fontFamily: "'Acme', sans-serif", color: "#595e5d" }}><i class="far fa-envelope"></i> monirshimul@gmail.com</p>
             </div>
             <div className="col-sm-4  text-center">
-              <a href="https://www.google.com">
+              <a href="https://www.github.com/ovichowdhury">
                 <img
                   className="hvr-bob hvr-glow"
                   src={Nahid}
@@ -82,6 +84,7 @@ export default class About extends Component {
               <p className="mt-3" style={{ lineHeight: "7px", fontSize: "17px", fontFamily: "'Lobstar', cursive", color: "#5f7705" }}><i class="fas fa-id-card"></i> Nahid Chowdhury</p>
               <p className="" style={{ lineHeight: "7px", fontSize: "17px", fontFamily: "'Acme', sans-serif", color: "#595e5d" }}><i class="fas fa-laptop-code"></i> Blockchain Developer</p>
               <p className="" style={{ lineHeight: "7px", fontSize: "17px", fontFamily: "'Acme', sans-serif", color: "#595e5d" }}><i class="fas fa-university"></i> ERA Infotech Ltd.</p>
+              <p className="" style={{ lineHeight: "7px", fontSize: "16px", fontFamily: "'Acme', sans-serif", color: "#595e5d" }}><i class="far fa-envelope"></i> nahid.chowdhury1995@gmail.com</p>
             </div>
           </div>
 
@@ -93,7 +96,9 @@ export default class About extends Component {
             </p>
               <hr></hr>
               <p style={{ fontSize: "15px", textAlign: "justify", fontFamily: "'Martel Sans', sans-serif" }}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti minus iusto aperiam, corporis ducimus, neque perferendis quos doloribus nulla quaerat tempore? Impedit unde ad officia veritatis cupiditate quibusdam at, enim aperiam neque culpa. Mollitia ipsum eos, quisquam praesentium iusto non eveniet deserunt, minima officiis, cumque officia unde quis? Suscipit, dignissimos sequi accusamus, esse minus fugiat assumenda asperiores, repudiandae alias corporis iste rem minima? Officia laboriosam explicabo iure! Sed ipsum cumque asperiores ut eveniet molestiae maxime doloribus perferendis, pariatur enim alias odio! Vitae beatae, alias velit voluptate excepturi quisquam expedita? Quas excepturi cum minus molestiae ipsum. Earum similique tempora cumque est autem, blanditiis culpa voluptate commodi saepe. Magnam nostrum odio eaque dignissimos! Tenetur, laborum? Provident quibusdam, cumque, neque temporibus repellat dolore omnis maxime veritatis recusandae qui alias atque sequi dolor beatae nostrum ut! Quia ipsam porro adipisci ea saepe maxime ducimus? Expedita suscipit nihil voluptatum reiciendis architecto quos adipisci, animi a, perspiciatis nemo nesciunt totam possimus ut consequuntur eaque in blanditiis nostrum harum quasi optio soluta consectetur. Ipsam delectus distinctio provident. Modi possimus debitis quasi consequuntur, obcaecati doloribus perferendis, commodi, dolorum architecto est praesentium harum accusantium eligendi iure ipsum quidem voluptatem repellendus quis hic dolore dolorem molestias consequatur facere! Sequi!
+              Holy Quran is a decentralized application build on top of Ethereum Blockchain. This version of Quran (The central religious text of Islam) is immutable, decentralized and fraud-proof. 
+              Our aim is to eventually deploy this proof-of-concept into production using Ethereum Main Net. Please contact us if you are interested to support this project by any means. Thank you.
+              
                 </p>
               <hr></hr>
             </div>
@@ -101,11 +106,11 @@ export default class About extends Component {
           <div className="row d-flex justify-content-center">
             <div className="jumbotron hvr-underline-from-center hvr-shadow" style={{ backgroundColor: "#fff" }}>
               <p style={{ fontFamily: "'Satisfy', cursive", fontSize: "25px", color: "#595e5d" }}>
-                About Blockchain
+                About Ethereum Blockchain
         </p>
               <hr></hr>
               <p style={{ fontSize: "15px", textAlign: "justify", fontFamily: "'Martel Sans', sans-serif" }}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, consectetur velit! Repellat quam, architecto odit suscipit eligendi doloribus voluptatum aspernatur, consectetur in, dolores ad molestias autem sint reiciendis maxime illo esse perspiciatis! Quia est nostrum dolor quam eum maiores saepe. Quo laborum cumque dolor dicta natus soluta minima, fugiat incidunt animi odit illum doloribus repellendus ut aut accusamus assumenda. Voluptate doloribus accusantium maxime quis inventore beatae cupiditate velit adipisci neque illo reprehenderit, ipsam perferendis accusamus laborum doloremque. Est enim ullam minus. Molestiae hic, assumenda, natus ea facere laborum nostrum unde commodi quam beatae, quo est debitis? Magni voluptate consectetur ex autem ad illo, ut cum, aperiam ipsa veniam sit dolores provident tenetur ipsam id qui, praesentium quasi facilis quidem non. Exercitationem ea temporibus corporis aut aspernatur error eius harum velit consectetur ad, cum maxime nam veritatis quasi, voluptas ut quos dolores, itaque dolor explicabo consequatur perspiciatis voluptatibus ex? Possimus, voluptate.
+              Ethereum is the most popular blockchain platform for DApps. Ethereum is a decentralized platform that allows us to build other blockchain-based DApps on top of it. In Ethereum, we build DApps using Ethereum smart contracts. Smart contracts are applications that run exactly as programmed without any possibility of downtime, censorship, fraud, or third-party interference. Ethereum can be thought of as a platform to deploy and run smart contracts.
                 </p>
               <hr></hr>
             </div>
