@@ -3,7 +3,7 @@ import Link from "react-router-dom";
 import Navbar from "./layout/Navbar";
 import Mehedi from "../static/mehedi1.jpg";
 import Monir from "../static/monir.jpeg";
-import Nahid from "../static/ovipass.jpg";
+import Nahid from "../static/ovi.jpeg";
 
 export default class About extends Component {
   render() {
