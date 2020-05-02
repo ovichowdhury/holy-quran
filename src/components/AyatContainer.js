@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Navbar from './layout/Navbar';
 import AyatView from './AyatView';
 import { withRouter } from 'react-router-dom';
 import { QuranStorageService } from '../services/quranStorageEthService';
