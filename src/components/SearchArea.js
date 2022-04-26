@@ -145,25 +145,25 @@ class SearchArea extends Component {
 
     render() {
         return (
-            <div className="container " id="searchBack" >
-                <div className="row d-flex justify-content-center ">
+            <div className="container mt-5" id="searchBack" >
+                <div className="row d-flex justify-content-center">
                     <div
-                        className="col-sm-8 mt-4"
+                        className="col-sm-8 mt-5"
                         style={{ display: "flex", justifyContent: "center" }}
                     >
                         <img
                             className="hvr-bob"
                             src={rightDivImage}
                             alt="left image"
-                            width="150px"
-                            height="150px"
-                            style={{borderRadius:100}}
+                            width="250px"
+                            height="250px"
+                            
                         ></img>
                     </div>
                     <div className=" col-sm-8 mt-4" style={{zIndex:"1"}}>
                         <div
                             className="card"
-                            style={{ boxShadow: "1px 0px 3px rgba(0, 0, 0, .1)" }}
+                            style={{ boxShadow:"rgba(0, 0, 0, 0.24) 0px 3px 8px", }}
                         >
                             <div className="card-body hvr-icon-grow-rotate">
                                 <form>

@@ -44,8 +44,8 @@ class Navbar extends Component {
 
     render() {
         return (
-            <div className="">
-                <nav className="navbar navbar-expand-lg navbar-custom navbar-dark" style={{ backgroundColor: "#899952" }}>
+            <div className="" style={{width:"100%", position:"fixed", top:0, zIndex:100 }}>
+                <nav className="navbar navbar-expand-lg navbar-custom navbar-dark" style={{ backgroundColor: "#000c24"}}>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>

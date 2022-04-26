@@ -1,16 +1,22 @@
 import React, { Component } from "react";
 // import border from '../static/border.png'
+import rightDivImage from "../static/centerImage.png";
 
 export default class AyatView extends Component {
-
-
   render() {
     let items = [];
     for (let i = 1; i < this.props.ayat.length; i++) {
       console.log(this.props.ayat[i]);
       items.push(
         <div className="col-sm-8 d-flex justify-content-center">
-          <p className="mt-3" style={{ fontSize: "20px", fontFamily: "'Capriola', sans-serif", color: "#333" }}>
+          <p
+            className="mt-3"
+            style={{
+              fontSize: "15px",
+              fontFamily: "'Capriola', sans-serif",
+              color: "#333",
+            }}
+          >
             <i className="fas fa-book-open"></i> &nbsp;
             {this.props.ayat[i].ayat}
           </p>
@@ -21,8 +27,8 @@ export default class AyatView extends Component {
     // console.log(this.props.ayat);
 
     return (
-      <div className="container">
-        <div className="row d-flex justify-content-center" style={{ fontFamily: "'Capriola', sans-serif", fontSize: "15px" }}>
+      <div className="container" style={{ paddingTop: "5%" }}>
+        {/* <div className="row d-flex justify-content-center" style={{ fontFamily: "'Capriola', sans-serif", fontSize: "15px" }}>
 
           <div className=" col-sm-3 d-flex justify-content-center">
             <div
@@ -129,21 +135,28 @@ export default class AyatView extends Component {
 
 
 
-        </div>
-        <div className="row d-flex justify-content-center">
-          {/* <div className="col-sm-9 d-flex justify-content-center" style={{ backgroundImage: `url(${border})`, backgroundRepeat: "no-repeat", width: "100%", height: "170px", marginTop: "-80px", boxShadow: "0px 10px 0px", zIndex: 0 }}>
+        </div> */}
 
-          </div> */}
-
-        </div>
-
-
-
-
-
-        <div className="row d-flex justify-content-center">
-          <div className="col-sm-8 mt-5 d-flex align-items-center justify-content-center"
-            style={{ borderBottomStyle: "dashed", borderColor: "#717171" }}
+        <div className="row d-flex justify-content-center align-items-center">
+          <div
+            className="col-sm-8"
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            <img
+              className="hvr-bob"
+              src={rightDivImage}
+              alt="left image"
+              width="250px"
+              height="250px"
+             
+            />
+          </div>
+          <div
+            className="col-sm-8 d-flex align-items-center justify-content-center"
+            style={{
+              borderBottomStyle: "dashed",
+              borderColor: "#717171",
+            }}
           >
             <p
               className="mt-3"
@@ -152,20 +165,19 @@ export default class AyatView extends Component {
                 textAlign: "right",
                 color: "#333",
                 fontSize: "40px",
-                fontFamily: "'Scheherazade', serif"
-
-
-
+                fontFamily: "'Scheherazade', serif",
               }}
             >
-              <i className="fas fa-book-open" style={{ color: "#899952" }}></i>{" "}
+              <i
+                className="fas fa-book-open"
+                style={{ color: "#000c24", fontSize: "15px" }}
+              ></i>{" "}
               &nbsp;
               {this.props.ayat[0].ayat}
             </p>
           </div>
           {items}
         </div>
-
       </div>
     );
   }

@@ -143,7 +143,7 @@ class ContentArea extends Component {
 
     return (
       <div className="container">
-        <div className="row d-flex justify-content-center mt-4">
+        <div className="row d-flex justify-content-center pt-5">
           <div className="radio mr-3">
             <label className="text-success hvr-grow-rotate" style={{ cursor: "pointer",fontSize:"25px", fontFamily:"'Satisfy', cursive" }}>
               <input

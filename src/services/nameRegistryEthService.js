@@ -17,8 +17,8 @@ const defaultPrivateKey = ethConfig.defaultAccountPrivateKey;
 
 //initialinze Nid SmartContract in NidContract variable 
 const nameRegistryContract = new web3.eth.Contract(nameRegistryConfig.contractABI, contractAddress, {
-    from: web3.eth.defaultAccount, // default from address
-    gasPrice: '20000000000' // default gas price in wei, 20 gwei in this case
+    // from: web3.eth.defaultAccount, // default from address
+    // gasPrice: '20000000000' // default gas price in wei, 20 gwei in this case
 });
 
 export const getContracts = async () => {

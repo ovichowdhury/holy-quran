@@ -15,8 +15,8 @@ export class QuranStorageService {
     constructor(contractDetails) {
         for (let i = 0; i < contractDetails.length; i++) {
             const quranStorageContract = new web3.eth.Contract(quranStorageConfig.contractABI, contractDetails[i][0], {
-                from: web3.eth.defaultAccount, // default from address
-                gasPrice: '20000000000' // default gas price in wei, 20 gwei in this case
+                // from: web3.eth.defaultAccount, // default from address
+                // gasPrice: '20000000000' // default gas price in wei, 20 gwei in this case
             });
 
             this.contracts.push(quranStorageContract);

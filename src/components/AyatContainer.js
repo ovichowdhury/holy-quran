@@ -3,6 +3,7 @@ import AyatView from './AyatView';
 import { withRouter } from 'react-router-dom';
 import { QuranStorageService } from '../services/quranStorageEthService';
 import Pagination from './Pagination';
+import rightDivImage from "../static/ayatPng.png";
 
 class AyatContainer extends Component {
 
@@ -66,8 +67,15 @@ class AyatContainer extends Component {
     render() {
 
         return (
-            <div>
-                <div style={{ padding: "25px" }}>
+            <div
+            style={{
+                background: `
+                url(${rightDivImage}) center/cover fixed no-repeat`,
+                height:"100vh"
+                
+            }}
+            >
+                <div>
                     {this.state.ayats.map((a) => <AyatView key={a.index} ayat={a} />)}
                 </div>
                 <div className="mt-5 text-center">
