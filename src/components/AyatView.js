@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 // import border from '../static/border.png'
-import rightDivImage from "../static/centerImage.png";
 
 export default class AyatView extends Component {
   render() {
