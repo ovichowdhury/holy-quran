@@ -27,9 +27,14 @@ export default class AyatView extends Component {
     // console.log(this.props.ayat);
 
     return (
-      <div className="container" style={{ paddingTop: "5%" }}>
-        {/* <div className="row d-flex justify-content-center" style={{ fontFamily: "'Capriola', sans-serif", fontSize: "15px" }}>
-
+      <div
+        className="container"
+        style={{ paddingTop: "5%", marginTop: "50px" }}
+      >
+        <div
+          className="row d-flex justify-content-center"
+          style={{ fontFamily: "'Capriola', sans-serif", fontSize: "15px" }}
+        >
           <div className=" col-sm-3 d-flex justify-content-center">
             <div
               className="d-flex align-items-center justify-content-center hvr-pop hvr-glow"
@@ -40,8 +45,7 @@ export default class AyatView extends Component {
                 borderRadius: 80,
                 backgroundColor: "#0c8579",
                 boxShadow: "1px 0px 3px #000",
-                border: "3px solid #fff"
-
+                border: "3px solid #fff",
               }}
             >
               Para : {this.props.ayat[0].para}
@@ -55,17 +59,12 @@ export default class AyatView extends Component {
                 borderRadius: 80,
                 backgroundColor: "#bc7840",
                 boxShadow: "1px 0px 3px #000",
-                border: "3px solid #fff"
+                border: "3px solid #fff",
               }}
             >
               Verse : {this.props.ayat[0].ayatNumber}
             </div>
           </div>
-
-
-
-
-
 
           <div
             className=" d-flex align-items-center justify-content-center hvr-pop hvr-glow"
@@ -77,14 +76,12 @@ export default class AyatView extends Component {
               backgroundColor: "#717171",
               boxShadow: "1px 0px 3px #000",
               textAlign: "center",
-              border: "5px solid #fff"
-
+              border: "5px solid #fff",
             }}
           >
-            Surah : <br />{this.props.ayat[0].surah.toUpperCase()}
+            Surah : <br />
+            {this.props.ayat[0].surah.toUpperCase()}
           </div>
-
-
 
           <div className=" col-sm-3 d-flex justify-content-center">
             <div
@@ -96,13 +93,11 @@ export default class AyatView extends Component {
                 borderRadius: 80,
                 backgroundColor: "#bc4571",
                 boxShadow: "1px 0px 3px #000",
-                border: "3px solid #fff"
-
+                border: "3px solid #fff",
               }}
             >
               Index : {this.props.ayat[0].index}
             </div>
-
 
             <div
               className="d-flex align-items-center justify-content-center hvr-pop hvr-glow"
@@ -113,44 +108,15 @@ export default class AyatView extends Component {
                 borderRadius: 80,
                 backgroundColor: "#899952",
                 boxShadow: "1px 0px 3px #000",
-                border: "3px solid #fff"
-
+                border: "3px solid #fff",
               }}
             >
               Ruku : {this.props.ayat[0].ruku}
             </div>
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </div> */}
+        </div>
 
         <div className="row d-flex justify-content-center align-items-center">
-          <div
-            className="col-sm-8"
-            style={{ display: "flex", justifyContent: "center" }}
-          >
-            <img
-              className="hvr-bob"
-              src={rightDivImage}
-              alt="left image"
-              width="250px"
-              height="250px"
-             
-            />
-          </div>
           <div
             className="col-sm-8 d-flex align-items-center justify-content-center"
             style={{
